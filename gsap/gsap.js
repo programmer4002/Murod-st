@@ -1,7 +1,16 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 // const nav = gsap.timeline ({ defaults: {duration: .5}});
 // nav.from('.nav', {opacity: 0, y:-80})
+
+if (ScrollTrigger.isTouch !== 1) {
+
+  ScrollSmoother.create({
+      wrapper: '.wrapper',
+      content: '.content',
+      smooth: 1.5,
+      effects: true
+  })}
 
 const tl = gsap.timeline({ defaults: { duration: .5 } });
 tl.from('.main__content-block h1', { opacity: 0, y: 80 })
