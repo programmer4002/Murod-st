@@ -505,11 +505,11 @@ body::-webkit-scrollbar-track {
     right: 1rem;
     bottom: 8rem;
     background: rgba(108, 52, 40, 1);
-    width: 4.5rem;
-    height: 4.5rem;
     border-radius: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    margin-left: -30px;
+    position: absolute;
     color: #ffffff;
     -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
     animation: cc-calto-action-ripple 0.6s linear infinite;
