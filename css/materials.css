@@ -155,30 +155,8 @@ nav.sticky {
     font-size: 18px;
   }
 }
-.main__contact {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(200px, auto);
-  grid-gap: 10px;
-  margin-top: 100px;
-  place-items: center;
-  background: linear-gradient(210.53deg, #6C3428 11.61%, #BA704F 69.72%);
-  color: white;
-  border-radius: 90px;
-  position: relative;
-}
-@media (max-width: 1200px) {
-  .main__contact {
-    display: none;
-  }
-}
-.main__contact i {
-  color: white;
-  font-size: 50px;
-}
-
 .materials {
-  margin-top: 200px;
+  padding-top: 150px;
 }
 .materials h1 {
   color: rgb(108, 52, 40);
@@ -496,7 +474,7 @@ footer .rights {
   border-top: 1px solid white;
   padding: 10px;
   margin-top: 150px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   position: relative;
 }
 footer .rights .scroll__up {
@@ -578,25 +556,36 @@ body::-webkit-scrollbar-track {
 
 .line-1 {
   transform: translate3d(0, -8px, 0);
+  display: none;
 }
 
 .line-2 {
   transform: translate3d(0, 0, 0);
+  display: none;
 }
 
 .line-3 {
   transform: translate3d(0, 8px, 0);
+  display: none;
+}
+
+.menu-open:checked + .menu-open-button .operator {
+  transition: 0.2s linear;
+  display: none;
 }
 
 .menu-open:checked + .menu-open-button .line-1 {
+  display: block;
   transform: translate3d(0, 0, 0) rotate(45deg);
 }
 
 .menu-open:checked + .menu-open-button .line-2 {
+  display: block;
   transform: translate3d(0, 0, 0) scale(0.1, 1);
 }
 
 .menu-open:checked + .menu-open-button .line-3 {
+  display: block;
   transform: translate3d(0, 0, 0) rotate(-45deg);
 }
 

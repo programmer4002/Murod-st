@@ -183,74 +183,13 @@ nav.sticky {
 // Main starts ================================= <
 
 
-
-// Section Main contact Starts =========================== <
-
-.main__contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 10px;
-    margin-top: 100px;
-    place-items: center;
-    background: linear-gradient(210.53deg, #6C3428 11.61%, #BA704F 69.72%);
-    color: white;
-    border-radius: 90px;
-    position: relative;
-
-    @media (max-width:1200px) {
-        display: none;
-
-        // grid-template-columns: repeat(2, 1fr);
-        // grid-auto-rows: minmax(130px, auto);
-
-        // &-block1 {
-        //     grid-column: 1;
-        //     grid-row: 1;
-        // }
-
-        // &-block3 {
-        //     grid-column: 1 / span 2;
-        // }
-
-
-    }
-
-    // @media (max-width:991px) {
-    //     grid-template-columns: repeat(1, 1fr);
-    //     justify-content: center;
-    //     grid-auto-rows: minmax(130px, auto);
-
-    //     &-block3 {
-    //         grid-column: 1;
-    //     }
-    // }
-
-    // @media (max-width:480px) {
-    //     grid-auto-rows: minmax(100px, auto);
-    //     place-items: start;
-    //     padding: 50px;
-    // }
-
-
-    i {
-        color: white;
-        font-size: 50px;
-    }
-}
-
 // Section Main contact End ================================= <>
 
 
 // Section Materials Starts ================================= <
 
-// $cyan: #0505A9;
-// $dark: #FFFFFF;
-// $borderW: 2px;
-
-
 .materials {
-    margin-top: 200px;
+    padding-top: 150px;
 
     h1 {
         color: rgba(108, 52, 40, 1);
@@ -633,7 +572,7 @@ footer {
         border-top: 1px solid white;
         padding: 10px;
         margin-top: 150px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         position: relative;
 
         .scroll__up{
@@ -790,29 +729,40 @@ body::-webkit-scrollbar-track {
 .line-1 {
     -webkit-transform: translate3d(0, -8px, 0);
     transform: translate3d(0, -8px, 0);
+    display: none;
 }
 
 .line-2 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    display: none;
 }
 
 .line-3 {
     -webkit-transform: translate3d(0, 8px, 0);
     transform: translate3d(0, 8px, 0);
+    display: none;
+}
+
+.menu-open:checked+.menu-open-button .operator {
+    transition: .2s linear;
+   display: none;
 }
 
 .menu-open:checked+.menu-open-button .line-1 {
+    display: block;
     -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
     transform: translate3d(0, 0, 0) rotate(45deg);
 }
 
 .menu-open:checked+.menu-open-button .line-2 {
+    display: block;
     -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
     transform: translate3d(0, 0, 0) scale(0.1, 1);
 }
 
 .menu-open:checked+.menu-open-button .line-3 {
+    display: block;
     -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
     transform: translate3d(0, 0, 0) rotate(-45deg);
 }

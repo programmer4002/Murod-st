@@ -178,7 +178,7 @@ nav.sticky {
 }
 
 .about {
-  margin-top: 200px;
+  padding-top: 200px;
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -550,7 +550,7 @@ footer .rights {
   border-top: 1px solid white;
   padding: 10px;
   margin-top: 150px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   position: relative;
 }
 footer .rights .scroll__up {
@@ -685,25 +685,36 @@ body::-webkit-scrollbar-track {
 
 .line-1 {
   transform: translate3d(0, -8px, 0);
+  display: none;
 }
 
 .line-2 {
   transform: translate3d(0, 0, 0);
+  display: none;
 }
 
 .line-3 {
   transform: translate3d(0, 8px, 0);
+  display: none;
+}
+
+.menu-open:checked + .menu-open-button .operator {
+  transition: 0.2s linear;
+  display: none;
 }
 
 .menu-open:checked + .menu-open-button .line-1 {
+  display: block;
   transform: translate3d(0, 0, 0) rotate(45deg);
 }
 
 .menu-open:checked + .menu-open-button .line-2 {
+  display: block;
   transform: translate3d(0, 0, 0) scale(0.1, 1);
 }
 
 .menu-open:checked + .menu-open-button .line-3 {
+  display: block;
   transform: translate3d(0, 0, 0) rotate(-45deg);
 }
 
